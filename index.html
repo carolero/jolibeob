@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Jolibeob</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="index.css" />
+    <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Cute+Font" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-auth.js"></script>
+    <script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyBBxs9g5zZp8o-JKSq3zkJklXSqPyoZczc",
+        authDomain: "jolibeob.firebaseapp.com",
+        databaseURL: "https://jolibeob.firebaseio.com",
+        projectId: "jolibeob",
+        storageBucket: "jolibeob.appspot.com",
+        messagingSenderId: "20598228901"
+    };
+    firebase.initializeApp(config);
+    </script>
+</head>
+<body ng-app="App">
+
+    <!--#######################################################################-->
+    <!--NAVEGADOR DO SITE-->
+
+    <nav class="mynav navbar navbar-expand-lg">
+        <a class="mytitle navbar-brand" href="#S">
+            <!-- <i class="fas fa-fire"></i> -->
+            <img src="img/flag.png" height="42">
+            조리법
+            Jolibeob
+        </a>
+        
+        <div class="myitens collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#modal-entrar" data-toggle="modal">entrar</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#modal-registro" data-toggle="modal">registrar-se</a>
+                </li>
+            </ul>
+            <div class="mydrop form-inline my-2 my-lg-0">
+                <div class="btn-group dropleft">
+                    <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        suas receitas
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Meus favoritos</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Enviar receita</a>
+                        <a class="dropdown-item" href="#">Gerênciar receitas</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!--#######################################################################-->
+    <!--MODAL NAVEGADOR / ENTRAR-->
+
+    <div class="modal" tabindex="-1" role="dialog"  id="modal-entrar">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Entrar</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="mt-4 modal-body">
+                <div class="input-group mb-3 offset-2 col-0 col-8">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1"><i class="fas fa-user"></i></span>
+                    </div>
+                    <input type="text" class="form-control sign-in-email" placeholder="e-mail" aria-label="e-mail" aria-describedby="basic-addon1">
+                </div>
+                <div class="input-group mb-3 offset-2 col-0 col-8">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1"><i class="fas fa-lock"></i></span>
+                    </div>
+                    <input type="password" class="form-control sign-in-password" placeholder="senha" aria-label="senha" aria-describedby="basic-addon1">
+                </div>
+                <div class="mt-4">
+                    <ul>
+                        <li>
+                            <a href="#">Esqueceu a senha?</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn botao-cancelar" data-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn botao-entrar">Entrar</button>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <!--#######################################################################-->
+    <!--MODAL NAVEGADOR / REGISTRO-->
+
+    <div class="modal" tabindex="-1" role="dialog"  id="modal-registro">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Registre-se</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="mt-4 modal-body">
+                <div class="input-group mb-3 offset-2 col-0 col-8">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1"><i class="fas fa-user"></i></span>
+                    </div>
+                    <input type="text" class="form-control sign-up-email" placeholder="e-mail" aria-label="e-mail" aria-describedby="basic-addon1">
+                </div>
+                <div class="input-group mb-3 offset-2 col-0 col-8">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1"><i class="fas fa-lock"></i></span>
+                    </div>
+                    <input type="password" class="form-control sign-up-password" placeholder="senha" aria-label="senha" aria-describedby="basic-addon1">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn botao-cancelar" data-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn botao-registrar">Entrar</button>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <!--#######################################################################-->
+    <!-- GRID DE RECEITAS -->
+
+    <section class="backFood">
+        <div class="img-food">
+            <div class="oioioi">
+                <h1>Bem-vindos</h1>
+                <p>
+                    A culinária sul-coreana não se limita a kimchi e churrasco. 
+                    <br>
+                    A comida coreana é especial, pois está intimamente ligada à cultura e história do país. É também extremamente ligada ao sabor.
+                    <br>
+                    Andando pelas ruas de Seoul ou até depois da balada no Gangnam, é possível experimentar uma gama diversificada de comidas gostosas na Coreia.
+                    E aqui você poderá conhecer cada uma delas e se aventurar na cozinha.
+                </p>
+                <a href="#/receitas">ver receitas...</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- #######################################################################-->
+    <!-- RECEITAS DO SITE -->
+
+    <div ng-view></div>
+
+    <!-- #######################################################################-->
+    <!-- FOOTER DO SITE -->
+
+    <footer class="myfooter navbar navbar-expand-lg">
+        <div class="footer-icon navbar-brand">
+            <a href="#"></a><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+        <div>
+            <p>by Laboratioa SP</p>
+        </div>
+    </footer>
+
+
+
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+</body>
+</html>

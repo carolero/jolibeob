@@ -1,0 +1,264 @@
+body {
+    height: 100%;
+    width: 100%;
+    margin: auto;
+}
+
+a:link { 
+    text-decoration:none; 
+} 
+
+::-webkit-scrollbar {
+    height:5px;
+    width:7px;
+    background:#f6f6f6;
+}
+ 
+::-webkit-scrollbar-thumb { 
+    background:#CF2A38; 
+}
+
+input {
+    box-shadow: 0 0 0 0!important;
+    border: 1px solid #d1d1d154!important;
+    outline: 0!important;
+}
+
+/* ####################################################################### */
+/* NAVEGADOR DO SITE */
+
+.mynav {
+    height: 90px;
+    background-color: #fff;
+    border-bottom: 2px solid #CF2A38;
+    box-shadow: 0px 2px 25px #000;
+}
+
+.mynav a, .mynav a:hover {
+    font-size: 25px;
+    color: #0045A2;
+    font-family: 'Fredoka One', cursive;
+    font-variant: small-caps;
+    text-transform: lowercase;
+}
+
+.mytitle::after {
+    content: "ᵇʳ";
+    color: #CF2A38;
+    font-size: 12px;
+    position: relative;
+    right: 5px;
+    bottom: 5px;
+}
+
+.mynav img {
+    border: 1px solid #fff;
+}
+
+.myitens a, .myitens a:hover {
+    font-size: 14px;
+    font-family: 'Comfortaa', cursive;
+    color: #8d8d8d;
+    font-variant: small-caps;
+    text-transform: lowercase;
+    box-shadow: 0 0 0 0!important;
+    border: 0 none!important;
+    outline: 0!important;
+}
+
+.mydrop button {
+    background-color: transparent;
+    border: none;
+    font-size: 14px;
+    font-family: 'Comfortaa', cursive;
+    color: #8d8d8d;
+    font-variant: small-caps;
+    text-transform: lowercase;
+    box-shadow: 0 0 0 0!important;
+    border: 0 none!important;
+    outline: 0!important;
+}
+
+/* ####################################################################### */
+/* MODAL DE LOGIN DO SITE */
+
+#modal-entrar .modal-body{
+    background-color: #fff;
+    border-radius: 0%;
+    border: none;
+    font-size: 14px;
+    font-family: 'Comfortaa', cursive;
+    color: #CF2A38;
+    font-variant: small-caps;
+    text-transform: lowercase;
+}
+
+#modal-entrar .modal-footer button {
+    font-size: 14px;
+    font-family: 'Comfortaa', cursive;
+    color: #fff;
+    font-variant: small-caps;
+    text-transform: lowercase;
+    font-weight: bolder;
+}
+
+#modal-entrar .modal-footer .botao-entrar {
+    background-color: #CF2A38
+}
+
+#modal-entrar a {
+    color: #CF2A38;
+    list-style-type: #cccccc;
+    text-decoration:none; 
+}
+
+
+/* ####################################################################### */
+/* MODAL DE REGISTRO DO SITE */
+
+
+#modal-registro .modal-body{
+    background-color: #fff;
+    border-radius: 0%;
+    border: none;
+    font-size: 14px;
+    font-family: 'Comfortaa', cursive;
+    color: #CF2A38;
+    font-variant: small-caps;
+    text-transform: lowercase;
+}
+
+#modal-registro .modal-footer button {
+    font-size: 14px;
+    font-family: 'Comfortaa', cursive;
+    color: #fff;
+    font-variant: small-caps;
+    text-transform: lowercase;
+    font-weight: bolder;
+}
+
+#modal-registro .modal-footer .botao-registrar {
+    background-color: #CF2A38
+}
+
+#modal-registro a {
+    color: #CF2A38;
+    list-style-type: #cccccc;
+    text-decoration:none; 
+}
+
+/* ####################################################################### */
+/* FUNDO GRID */
+
+.backFood {
+    height: 100%;
+    width: 100%
+}
+
+.img-food {
+    width: 100%;
+    height: 558px;
+    background-image: url(img/bibimbap.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+/* ####################################################################### */
+/* GRID DE RECEITAS */
+
+/* .item1 { 
+    grid-area: um; 
+}
+
+.item2 { 
+    grid-area: dois;
+    background-color: #fff;
+}
+
+
+.grid-container {
+    display: grid;
+    grid-template-areas: 'um dois'
+                         'um dois';
+    grid-gap: 10px;
+    background-color: transparent;
+    padding: 34px 30px 0px 30px;
+}
+
+.grid-container > div {
+    background: transparent;
+    text-align: center;
+    padding: 21px;
+    font-size: 28px;
+    margin: 0px 10px;
+} */
+
+.oioioi {
+    background-color: rgba(255, 255, 255, 0.829);
+    width: 500px;
+    height: 400px;
+    position: relative;
+    left: 100px;
+    top: 75px;
+    padding: 20px;
+}
+
+.oioioi h1 {
+    color: #0045A2;
+    font-family: 'Fredoka One', cursive;
+    font-variant: small-caps;
+    text-transform: lowercase;
+    text-align: center;
+}
+
+.oioioi p {
+    font-size: 16px;
+    font-family: 'Comfortaa', cursive;
+    color: #222222;
+    font-variant: small-caps;
+    text-transform: lowercase;
+    font-weight: bolder;
+}
+
+.oioioi a, .oioioi a:hover {
+    border: none;
+    padding: 5px 50px;
+    color: #fff;
+    background-color: #CF2A38;
+    border-radius: 4px;
+    margin-left: 21vh;
+    position: relative;
+    top: 30px;
+    text-decoration: none!important;
+
+}
+
+/* ####################################################################### */
+/* FOOTER DO SITE */
+
+.myfooter {
+    display: grid;
+    height: 90px;
+    background-color: #fff;
+    border-top: 2px solid #CF2A38;
+    box-shadow: 0px 2px 25px #000;
+}
+
+.myfooter p {
+    color: #8d8d8d;
+    font-size: 10px;
+    font-family: 'Comfortaa', cursive;
+    font-variant: small-caps;
+    text-transform: lowercase;
+    margin-top: 13px;
+    margin-left: 80vw;
+}
+
+.footer-icon i {
+    color: #CF2A38;
+}
+
+.footer-icon i:hover {
+    color: #0045A2;
+}
+

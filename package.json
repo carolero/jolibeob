@@ -1,0 +1,31 @@
+{
+  "name": "jolibeob",
+  "version": "1.0.0",
+  "description": "korean recipes website",
+  "main": "index.js",
+  "scripts": {
+    "test": "jolibeob()"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carolero/jolibeob.git"
+  },
+  "keywords": [
+    "korean",
+    "recipes",
+    "food",
+    "korean",
+    "food"
+  ],
+  "author": "Carol Rodrigues",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/carolero/jolibeob/issues"
+  },
+  "homepage": "https://github.com/carolero/jolibeob#readme",
+  "dependencies": {
+    "ajax": "0.0.4",
+    "express": "^4.16.3",
+    "path": "^0.12.7"
+  }
+}
